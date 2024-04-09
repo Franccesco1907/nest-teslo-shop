@@ -7,7 +7,6 @@ export const fileFilter = (req: Express.Request, file: Express.Multer.File, call
 
   if (validExtensions.includes(fileExtension)) {
     callback(null, true)
-
   }
 
   callback(null, false)
