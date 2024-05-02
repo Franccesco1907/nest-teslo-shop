@@ -11,3 +11,4 @@
 5. Levantar la base de datos mediante el comando `docker-compose up -d`
 6. Ejecutar SEED `localhost:3000/api/seed`
 7. Levantar: `yarn start:dev`
+8. Para conectar con el frontend usar el siguiente repositorio: https://github.com/Franccesco1907/ws-client
