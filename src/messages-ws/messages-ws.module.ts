@@ -1,10 +1,11 @@
 import { Module } from '@nestjs/common';
-import { AuthModule } from 'src/auth/auth.module';
-import { MessagesWsGateway } from './messages-ws.gateway';
 import { MessagesWsService } from './messages-ws.service';
+import { MessagesWsGateway } from './messages-ws.gateway';
+
+import { AuthModule } from '../auth/auth.module';
 
 @Module({
-  imports: [AuthModule],
-  providers: [MessagesWsGateway, MessagesWsService]
+  providers: [MessagesWsGateway, MessagesWsService],
+  imports: [ AuthModule ]
 })
-export class MessagesWsModule { }
+export class MessagesWsModule {}
