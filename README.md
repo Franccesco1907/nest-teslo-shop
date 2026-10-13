@@ -1,14 +1,8 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
-
 # Teslo API
 
-1. Clone project
-2. `yarn install`
-3. Copy `.env.template` file and rename it to `.env`
-4. Change the environment variables
-5. Levantar la base de datos mediante el comando `docker-compose up -d`
-6. Ejecutar SEED `localhost:3000/api/seed`
-7. Levantar: `yarn start:dev`
-8. Para conectar con el frontend usar el siguiente repositorio: https://github.com/Franccesco1907/ws-client
+API NestJS/PostgreSQL de productos, autenticación y WebSockets. Usa las versiones Node/npm de `package.json`.
+1. Ejecuta `npm ci`, copia `.env.template` a `.env` y ajusta las variables (incluido `JWT_SECRET`).
+2. Inicia PostgreSQL con `docker compose up -d` y la API con `npm run start:dev`.
+3. Swagger: http://localhost:3000/api. Solo para datos de desarrollo, solicita `GET /api/seed` **después de arrancar la API**: borra los productos y usuarios existentes.
+Compilación: `npm run build`; arranque compilado: `npm start`. `npm run test:e2e` requiere la base de datos; no hay archivos de pruebas unitarias en `src/`.
+Cliente WebSocket: [ws-client](https://github.com/Franccesco1907/ws-client).
